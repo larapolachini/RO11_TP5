@@ -217,4 +217,4 @@ $$
 
 ![alt text](image-2.png)
 
-Algorithm was implemented in the code that can be found in the same repository.
+Algorithm was implemented in the code that can be found in the same repository in "Q5.py".
