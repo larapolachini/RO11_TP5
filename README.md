@@ -85,12 +85,11 @@ $$
 
 we can write the equations for all the different states:
 
-$$
-V^{*}(S_{0}) = R(0) + \max_{a} \gamma \, [ T(S_{0}, a_{1}, S_{1})V^{*}(S_{1}) + T(S_{0}, a_{2}, S_{2})V^{*}(S_{2}) ]
-$$
+$V^{*}(S_{0}) = R(0) + \max_{a} \gamma \, ( T(S_{0}, a_{1}, S_{1})V^{*}(S_{1}) + T(S_{0}, a_{2}, S_{2})V^{*}(S_{2}) )$
+
 
 $$
-V^{*}(S_{0}) = \max_{a} \gamma \, [ V^{*}(S_{1}) + V^{*}(S_{2}) ]
+V^{*}(S_{0}) = \max_{a} \gamma \, ( V^{*}(S_{1}) + V^{*}(S_{2}) )
 $$
 
 ---
