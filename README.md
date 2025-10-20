@@ -85,43 +85,43 @@ $$
 
 we can write the equations for all the different states:
 
-$$
+```math
 V^{*}(S_{0}) = R(0) + \max_{a}\, \gamma \, \left[ T(S_{0}, a_{1}, S_{1})\,V^{*}(S_{1}) + T(S_{0}, a_{2}, S_{2})\,V^{*}(S_{2}) \right]
-$$
+```
 
-$$
+```math
 V^{*}(S_{0}) = \max_{a}\, \gamma \, \left[ V^{*}(S_{1}) + V^{*}(S_{2}) \right]
-$$
+```
 
 ---
 
-$$
+```math
 V^{*}(S_{1}) = R(1) + \max_{a}\, \gamma \, \left[ T(S_{1}, a_{0}, S_{1})\,V^{*}(S_{1}) + T(S_{1}, a_{0}, S_{3})\,V^{*}(S_{3}) \right]
-$$
+```
 
-$$
+```math
 V^{*}(S_{1}) = \max_{a}\, \gamma \, \left[ (1 - x)\,V^{*}(S_{1}) + x\,V^{*}(S_{3}) \right]
-$$
+```
 
 ---
 
-$$
+```math
 V^{*}(S_{2}) = R(2) + \max_{a}\, \gamma \, \left[ T(S_{2}, a_{0}, S_{3})\,V^{*}(S_{3}) + T(S_{2}, a_{0}, S_{0})\,V^{*}(S_{0}) \right]
-$$
+```
 
-$$
+```math
 V^{*}(S_{2}) = 1 + \max_{a}\, \gamma \, \left[ y\,V^{*}(S_{3}) + (1 - y)\,V^{*}(S_{0}) \right]
-$$
+```
 
 ---
 
-$$
+```math
 V^{*}(S_{3}) = R(3) + \max_{a}\, \gamma \, \left[ T(S_{3}, a_{0}, S_{0})\,V^{*}(S_{0}) \right]
-$$
+```
 
-$$
+```math
 V^{*}(S_{3}) = 10 + \max_{a}\, \gamma \, \left[ V^{*}(S_{0}) \right]
-$$
+```
 
 ---
 
