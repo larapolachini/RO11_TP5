@@ -85,43 +85,43 @@ $$
 
 we can write the equations for all the different states:
 
-```math
-V^{*}(S_{0}) = R(0) + \max_{a} \gamma \, [ T(S_{0}, a_{1}, S_{1})V^{*}(S_{1}) + T(S_{0}, a_{2}, S_{2})V^{*}(S_{2}) ]
-```
+$$
+V^{*}(S_{0}) = R(0) + \max_{a}\, \gamma \, \left[ T(S_{0}, a_{1}, S_{1})\,V^{*}(S_{1}) + T(S_{0}, a_{2}, S_{2})\,V^{*}(S_{2}) \right]
+$$
 
-```math
-V^{*}(S_{0}) = \max_{a} \gamma \, [ V^{*}(S_{1}) + V^{*}(S_{2}) ]
-```
-
----
-
-```math
-V^{*}(S_{1}) = R(1) + \max_{a} \gamma \, [ T(S_{1}, a_{0}, S_{1})V^{*}(S_{1}) + T(S_{1}, a_{0}, S_{3})V^{*}(S_{3}) ]
-```
-
-```math
-V^{*}(S_{1}) = \max_{a} \gamma \, [ (1 - x)V^{*}(S_{1}) + xV^{*}(S_{3}) ]
-```
+$$
+V^{*}(S_{0}) = \max_{a}\, \gamma \, \left[ V^{*}(S_{1}) + V^{*}(S_{2}) \right]
+$$
 
 ---
 
-```math
-V^{*}(S_{2}) = R(2) + \max_{a} \gamma \, [ T(S_{2}, a_{0}, S_{3})V^{*}(S_{3}) + T(S_{2}, a_{0}, S_{0})V^{*}(S_{0}) ]
-```
+$$
+V^{*}(S_{1}) = R(1) + \max_{a}\, \gamma \, \left[ T(S_{1}, a_{0}, S_{1})\,V^{*}(S_{1}) + T(S_{1}, a_{0}, S_{3})\,V^{*}(S_{3}) \right]
+$$
 
-```math
-V^{*}(S_{2}) = 1 + \max_{a} \gamma \, [ yV^{*}(S_{3}) + (1 - y)V^{*}(S_{0}) ]
-```
+$$
+V^{*}(S_{1}) = \max_{a}\, \gamma \, \left[ (1 - x)\,V^{*}(S_{1}) + x\,V^{*}(S_{3}) \right]
+$$
 
 ---
 
-```math
-V^{*}(S_{3}) = R(3) + \max_{a} \gamma \, [ T(S_{3}, a_{0}, S_{0})V^{*}(S_{0}) ]
-```
+$$
+V^{*}(S_{2}) = R(2) + \max_{a}\, \gamma \, \left[ T(S_{2}, a_{0}, S_{3})\,V^{*}(S_{3}) + T(S_{2}, a_{0}, S_{0})\,V^{*}(S_{0}) \right]
+$$
 
-```math
-V^{*}(S_{3}) = 10 + \max_{a} \gamma \, [ V^{*}(S_{0}) ]
-```
+$$
+V^{*}(S_{2}) = 1 + \max_{a}\, \gamma \, \left[ y\,V^{*}(S_{3}) + (1 - y)\,V^{*}(S_{0}) \right]
+$$
+
+---
+
+$$
+V^{*}(S_{3}) = R(3) + \max_{a}\, \gamma \, \left[ T(S_{3}, a_{0}, S_{0})\,V^{*}(S_{0}) \right]
+$$
+
+$$
+V^{*}(S_{3}) = 10 + \max_{a}\, \gamma \, \left[ V^{*}(S_{0}) \right]
+$$
 
 ---
 
@@ -185,7 +185,6 @@ we use $x = 0$. Then $E_{a_0} = V^*(S_1)$, and since $V^*(S_2) > V^*(S_1)$, $a_2
 So, hen $x = 0$, both $a_0$ and $a_1$ transition to $S_1$, while $a_2$ goes to $S_2$ with a higher reward.  
 Thus, $a_2$ is the optimal action for all $\gamma \in [0,1)$ and $y \in [0,1]$.
 
----
 
 ### **Question 4:** 
 
@@ -210,8 +209,6 @@ from what we take: for $\pi ^* (S_0) = a_1$ the $V^* (S_1)$ should be: $$V^*(S_1
 $$
 \max_a \gamma \left[ (1 - x)V^*(S_1) + xV^*(S_3) \right] \ge 1 + \max_a \gamma \left[ yV^*(S_3) + (1 - y)V^*(S_0) \right]
 $$
-
----
 
 ### **Question 5:** 
 
