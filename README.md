@@ -129,54 +129,55 @@ V^{*}(S_{3}) = 10 + \max_{a}\, \gamma \, \left[ V^{*}(S_{0}) \right]
 
 Using the equation:
 
-$$
+```math
 \pi^*(s) = \arg\max_a \sum_{s'} T(s, a, s') V^*(s')
-$$
+```
 
 we choose the action $a$ that gives the highest expected future value from state $s$
 
 For each action at state $S_0$:
 
 - **Action $a_2$:**
-  $$
+  ```math
   Q^*(S_0, a_2) = V^*(S_2)
-  $$
+  ```
 
 - **Action $a_1$:**
-  $$
+  ```math
   Q^*(S_0, a_1) = V^*(S_1)
-  $$
+  ```
 
 - **Action $a_0$:**
-  $$
+  ```math
   Q^*(S_0, a_0) = (1 - x)V^*(S_1) + xV^*(S_3)
-  $$
+  ```
 
 The optimal policy is:
-$$
+```math
 \pi^*(S_0) = \arg\max_a Q^*(S_0, a)
-$$
+```
 
 ---
 
 Action $a_2$ is optimal if:
-$$
+```math
 V^*(S_2) \ge \max\{V^*(S_1),\ (1 - x)V^*(S_1) + xV^*(S_3)\}
-$$
+```
 
 Since the immediate reward $R(S_2) = 1$ and $R(S_1) = 0$,
-$$
+```math
 V^*(S_2) > V^*(S_1)
-$$
+```
+
 for all $\gamma \in (0,1)$. Therefore, $a_2$ already dominates $a_1$.
 
 ---
 
 To ensure $a_2$ also beats $a_0$:
 
-$$
+```math
 (1 - x)V^*(S_1) + xV^*(S_3) \le V^*(S_2)
-$$
+```
 
 we use $x = 0$. Then $E_{a_0} = V^*(S_1)$, and since $V^*(S_2) > V^*(S_1)$, $a_2$ is optimal.
 
@@ -190,25 +191,25 @@ Thus, $a_2$ is the optimal action for all $\gamma \in [0,1)$ and $y \in [0,1]$.
 
 Again, using the equation:
 
-$$
+```math
 \pi^*(s) = \arg\max_a \sum_{s'} T(s, a, s') V^*(s')
-$$
+```
 
 we have
 
-$$
+```math
 \pi^*(S_0) = \arg\max_a \left[ T(S_0, a_1, S_1)V^*(S_1) + T(S_0, a_2, S_2)V^*(S_2) \right]
-$$
+```
 
-$$
+```math
 \pi^*(S_0) = \arg\max_a \left[ V^*(S_1) + V^*(S_2) \right]
-$$
+```
 
 from what we take: for $\pi ^* (S_0) = a_1$ the $V^* (S_1)$ should be: $$V^*(S_1) \ge V^*(S_2)$$
 
-$$
+```math
 \max_a \gamma \left[ (1 - x)V^*(S_1) + xV^*(S_3) \right] \ge 1 + \max_a \gamma \left[ yV^*(S_3) + (1 - y)V^*(S_0) \right]
-$$
+```
 
 ### **Question 5:** 
 
